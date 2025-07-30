@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak RO SYSTEM - Premium RO Water Purifiers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --primary: #1a73e8;
+            --secondary: #0d47a1;
+            --accent: #00bcd4;
+            --light: #f5f9ff;
+            --dark: #1a237e;
+            --gray: #5f6368;
+            --success: #4caf50;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .products-filter {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            height: 220px;
+            background-color: #e3f2fd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .product-info p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .product-features {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .product-features li {
+            margin-bottom: 8px;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: 400px;
+            background-color: #bbdefb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .owner-info {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--light);
+            border-radius: 10px;
+        }
+
+        .owner-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+            border: 3px solid var(--primary);
+        }
+
+        .owner-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .owner-details h4 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .owner-details p {
+            margin: 0;
+            color: var(--gray);
+        }
+
+        /* Location Section */
+        .location {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .location-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .map-container {
+            height: 400px;
+            background-color: #e3f2fd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .shop-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .shop-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .shop-info i {
+            margin-right: 10px;
+            color: var(--primary);
+            width: 25px;
+        }
+
+        .hours {
+            margin-top: 30px;
+        }
+
+        .hours h4 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .hours-table {
+            width: 100%;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .hours-table td {
+            padding: 8px 0;
+        }
+
+        .hours-table td:last-child {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-form h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 20px 20px;
+            max-height: 200px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--primary);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-content {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-content p {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 2px solid var(--primary);
+        }
+
+        .author-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #bbbbbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: #bbbbbb;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            margin-top: 5px;
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #bbbbbb;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content,
+            .location-content,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img {
+                height: 300px;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
+            .features, .products, .about,
+            .location, .contact, .faq,
+            .testimonials {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div style="background-color: #1a73e8; color: white; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border-radius: 8px; font-size: 24px;">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h1>Deepak <span>ROSYSTEM & Repairing Center</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Pure Water, Healthy Life</h2>
+            <p>Experience the purity with our advanced RO water purifiers. Protect your family from harmful contaminants with our range of high-quality water purification systems.</p>
+            <div class="hero-buttons">
+                <a href="#products" class="cta-button">View Products</a>
+                <a href="#contact" class="cta-button btn-outline">Book Service</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our RO Systems</h2>
+                <p>Our water purifiers are designed with advanced technology to provide you with the purest drinking water</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>7-Stage Purification</h3>
+                    <p>Advanced filtration process that removes impurities while retaining essential minerals</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-battery-full"></i>
+                    </div>
+                    <h3>Energy Efficient</h3>
+                    <p>Consumes less power while delivering high performance and pure water</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tint-slash"></i>
+                    </div>
+                    <h3>Zero Water Wastage</h3>
+                    <p>Innovative technology that minimizes water wastage during purification</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>UV Protection</h3>
+                    <p>Eliminates bacteria and viruses with ultraviolet protection technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our RO Purifier Models</h2>
+                <p>Choose from our range of premium water purification systems</p>
+            </div>
+            <div class="products-filter">
+                <button class="filter-btn active" data-filter="all">All Models</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="under-sink">Under Sink</button>
+                <button class="filter-btn" data-filter="wall-mounted">Wall Mounted</button>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-category="residential">
+                    <div class="product-img">
+                        <img src="images/image1.jpeg" alt="AquaPure Pro 7S">
+                    </div>
+                    <div class="product-info">
+                        <h3>AquaPure Pro 7S</h3>
+                        <p>7-stage purification with UV protection and mineral enhancement</p>
+                        <div class="product-price">10,000</div>
+                        <ul class="product-features">
+                            <li>10L/hour purification capacity</li>
+                            <li>Smart TDS monitoring</li>
+                            <li>Auto shut-off protection</li>
+                            <li>Stainless steel storage tank</li>
+                        </ul>
+                        <button class="cta-button">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="residential">
+                    <div class="product-img">
+                        <img src="images/image2.jpg" alt="AquaPure Elite UV">
+                    </div>
+                    <div class="product-info">
+                        <h3>AquaPure Elite UV</h3>
+                        <p>Advanced UV purification with 8-stage filtration process</p>
+                        <div class="product-price">7,000</div>
+                        <ul class="product-features">
+                            <li>UV + UF purification</li>
+                            <li>Digital display panel</li>
+                            <li>Self-cleaning function</li>
+                            <li>120L/hour capacity</li>
+                        </ul>
+                        <button class="cta-button">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="under-sink">
+                    <div class="product-img">
+                        <img src="images/image3.jpg" alt="AquaPure Compact">
+                    </div>
+                    <div class="product-info">
+                        <h3>AquaPure Compact</h3>
+                        <p>Space-saving under sink model with high efficiency</p>
+                        <div class="product-price">5,000</div>
+                        <ul class="product-features">
+                            <li>6-stage purification</li>
+                            <li>Zero water wastage technology</li>
+                            <li>Compact design</li>
+                            <li>Easy installation</li>
+                        </ul>
+                        <button class="cta-button">View Details</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="commercial">
+                    <div class="product-img">
+                        <img src="images/image4.jpg" alt="AquaPure Commercial 200">
+                    </div>
+                    <div class="product-info">
+                        <h3>AquaPure Commercial 200</h3>
+                        <p>High-capacity RO system for offices and institutions</p>
+                        <div class="product-price">15,000</div>
+                        <ul class="product-features">
+                            <li>200L/hour purification</li>
+                            <li>Industrial-grade components</li>
+                            <li>Dual purification process</li>
+                            <li>24/7 operation capability</li>
+                        </ul>
+                        <button class="cta-button">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="images/ro.jpg" alt="Deepak RO Store">
+                </div>
+                <div class="about-text">
+                    <h2>About Deepak RO SYSTEM</h2>
+                    <p>Founded in 2010, Deepak RO SYSTEM has been at the forefront of water purification technology, providing clean and safe drinking water solutions to thousands of satisfied customers across India.</p>
+                    <p>Our mission is to ensure every home and business has access to pure, healthy water through our innovative and reliable RO purification systems.</p>
+                    <p>With over 12 years of industry experience, we've perfected our technology to deliver the highest quality water purification systems that are both efficient and environmentally conscious.</p>
+
+                    <div class="owner-info">
+                        <div class="owner-img">
+                            <img src="images/ro.jpg" alt="Deepak Kumar">
+                        </div>
+                        <div class="owner-details">
+                            <h4>Deepak Kumar</h4>
+                            <p>Owner, Deepak RO SYSTEM</p>
+                            <p>Water purification expert with 15+ years experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="location">
+        <div class="container">
+            <div class="section-title">
+                <h2>Visit Our Store</h2>
+                <p>Experience our products firsthand at our showroom</p>
+            </div>
+            <div class="location-content">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.122363525856!2d77.07601657517346!3d28.728546375598103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d07a8b6a5f9b3%3A0x6f3b9a0a0a0a0a0!2sGoyala%20Kherka%20Road%2C%20Dulhera%2C%20Haryana%20124004%2C%20India!5e0!3m2!1sen!2sus!4v1690300000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="shop-info">
+                    <h3>Deepak RO SYSTEM</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Goyala Kherka Road, VPO Dulhera, Haryana 124004</p>
+                    <p><i class="fas fa-phone"></i> +91 9992010500</p>
+                    <p><i class="fas fa-envelope"></i> deepakkumar@gmail.com</p>
+
+                    <div class="hours">
+                        <h4>Opening Hours</h4>
+                        <table class="hours-table">
+                            <tr>
+                                <td>Monday - Friday</td>
+                                <td>9:00 AM - 08:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Saturday</td>
+                                <td>10:00 AM - 06:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Sunday</td>
+                                <td>10:00 AM - 08:00 PM</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/jtDQ4WiMM1N3Mr1m6" target="_blank" class="cta-button" style="margin-top: 30px;">Get Directions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Have questions? Get in touch with our water experts</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send Your Query</h3>
+                    <form id="queryForm" action="https://formspree.io/f/mvoeyyrg" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="product">Product Interest</label>
+                            <select id="product" name="product" class="form-control">
+                                <option value="">Select a product</option>
+                                <option value="pro7s">AquaPure Pro 7S</option>
+                                <option value="elite">AquaPure Elite UV</option>
+                                <option value="compact">AquaPure Compact</option>
+                                <option value="commercial">AquaPure Commercial</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell us about your requirements" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Submit Query</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Customer Support</h3>
+                    <p>Our dedicated support team is available to assist you with any questions, installation queries, or service requests.</p>
+
+                    <div style="background-color: var(--light); padding: 25px; border-radius: 10px; margin-top: 30px;">
+                        <h4 style="margin-bottom: 20px;">Service & Support</h4>
+                        <p><i class="fas fa-headset"></i> Support Hotline: +91 9992010500</p>
+                        <p><i class="fas fa-envelope"></i> Email Support: deepakkumar@gmail.com</p>
+                        <p><i class="fas fa-tools"></i> Service Request: service@deepakro.com</p>
+                        <p><i class="fas fa-clock"></i> Support Hours: 8AM-8PM (Mon-Sat)</p>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <h4>Book a Free Demo</h4>
+                        <p>Experience our purifiers in your home or office with a free demonstration.</p>
+                        <a href="#contact" class="cta-button" style="margin-top: 15px;">Schedule a Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about RO water purifiers</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How often should I replace RO filters?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pre-filters should be replaced every 6-9 months, carbon filters every 9-12 months, and the RO membrane every 2-3 years depending on your water quality and usage.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is RO water safe for drinking?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, RO water is completely safe for drinking. Our systems include mineralization stages to add back essential minerals removed during the purification process.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How much water is wasted in RO purification?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Traditional RO systems waste about 3-4 liters for every liter purified. Our advanced systems with zero wastage technology reduce this to less than 1 liter wasted per liter purified.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What maintenance does an RO system require?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Regular maintenance includes filter replacements as recommended, sanitizing the storage tank every 6 months, and checking system pressure annually. We offer comprehensive maintenance plans.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Customer Testimonials</h2>
+                <p>What our customers say about Deepak RO products</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The AquaPure Pro 7S has transformed our drinking water quality. Installation was quick, and the after-sales service has been exceptional. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="images/ri.jpg" alt="">
+                            </div>
+                            <div class="author-info">
+                                <h4>Rishi Kumar</h4>
+                                <p>Customer since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"We installed Deepak RO systems in our office and have seen a significant reduction in water-borne illnesses. The commercial model is perfect for our 50-employee office."</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="images/san.jpg" alt="">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sandeep Kumar</h4>
+                                <p>Business Owner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The service team was prompt when we had a minor issue with our system. They arrived within 24 hours and fixed everything at no extra cost. Great service!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-img">
+                                <img src="images/pr.jpg" alt="">
+                            </div>
+                            <div class="author-info">
+                                <h4>Praveen Kumar</h4>
+                                <p>Home User</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Deepak RO SYSTEM</h3>
+                    <p style="color: #bbbbbb; margin-bottom: 20px;">Providing pure water solutions since 2010 with advanced RO technology for healthier living.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#location">Store Location</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Our Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Residential RO Systems</a></li>
+                        <li><a href="#">Commercial RO Systems</a></li>
+                        <li><a href="#">UV Water Purifiers</a></li>
+                        <li><a href="#">Alkaline Water Systems</a></li>
+                        <li><a href="#">Water Softeners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> Goyala Kherka Road, VPO Dulhera, Haryana 124004</p>
+                        <p><i class="fas fa-phone"></i> +91 9992010500</p>
+                        <p><i class="fas fa-envelope"></i> deepakkumar@gmail.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sat: 9:00AM - 8:00PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Deepak RO SYSTEM. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                const icon = question.querySelector('i');
+                if (faqItem.classList.contains('active')) {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Product Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+        
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                // Filter products
+                productCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Form Submission
+        const contactForm = document.getElementById('queryForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // Form validation
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                
+                if (!name || !email || !phone) {
+                    alert('Please fill in all required fields');
+                    return;
+                }
+                
+                // Simple email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                // Simple phone validation
+                const phoneRegex = /^\d{10}$/;
+                if (!phoneRegex.test(phone)) {
+                    alert('Please enter a valid 10-digit phone number');
+                    return;
+                }
+                
+                // In a real implementation, this would send the form data
+                // For this demo, we'll show a success message
+                alert('Thank you for your query! We will contact you shortly.');
+                
+                // Reset the form
+                contactForm.reset();
+            });
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
